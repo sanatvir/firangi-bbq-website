@@ -1,20 +1,20 @@
 {
   "version": 2,
-  "public": true,
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static"
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/assets/(.*)",
-      "dest": "dist/client/assets/$1"
+      "dest": "/dist/client/assets/$1",
+      "headers": { "cache-control": "public, max-age=31536000, immutable" }
     },
     {
       "src": "/(.*)",
-      "dest": "dist/client/index.html"
+      "dest": "dist/server/server.js"
     }
   ]
 }
