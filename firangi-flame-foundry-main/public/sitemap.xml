@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://firangibbq.com/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://firangibbq.com/logo.webp</image:loc>
+      <image:title>Firangi BBQ 2.0 Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://firangibbq.com/hero-1.jpg</image:loc>
+      <image:title>Live Tandoor - Firangi BBQ 2.0</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://firangibbq.com/hero-2.jpg</image:loc>
+      <image:title>Premium Ambience - Firangi BBQ 2.0</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://firangibbq.com/hero-3.jpg</image:loc>
+      <image:title>Authentic Kebabs - Firangi BBQ 2.0</image:title>
+    </image:image>
+  </url>
+</urlset>
