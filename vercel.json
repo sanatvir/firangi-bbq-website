@@ -1,5 +1,16 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/client",
-  "cleanUrls": true
+  "version": 2,
+  "framework": "vite",
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/dist/client/assets/$1",
+      "check": true
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/client/index.html",
+      "check": true
+    }
+  ]
 }
