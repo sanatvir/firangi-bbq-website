@@ -1,16 +1,20 @@
 {
   "version": 2,
-  "framework": "vite",
+  "public": true,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     {
       "src": "/assets/(.*)",
-      "dest": "/dist/client/assets/$1",
-      "check": true
+      "dest": "dist/client/assets/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/dist/client/index.html",
-      "check": true
+      "dest": "dist/client/index.html"
     }
   ]
 }
