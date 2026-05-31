@@ -42,7 +42,7 @@
 
 :root {
   --radius: 1rem;
-  /* Firangi BBQ: charcoal, ember, gold, cream — warm premium smokehouse */
+  /* Firangi Barbeque: charcoal, ember, gold, cream — warm premium smokehouse */
   --background: oklch(0.16 0.015 40);          /* deep charcoal */
   --foreground: oklch(0.96 0.02 80);            /* warm cream */
   --card: oklch(0.20 0.025 40);

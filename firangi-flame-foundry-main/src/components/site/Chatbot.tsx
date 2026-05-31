@@ -6,7 +6,7 @@ type Msg = { role: "bot" | "user"; text: string; chips?: { label: string; q: str
 
 const greeting: Msg = {
   role: "bot",
-  text: "Hey 👋 I'm the Firangi BBQ assistant. Ask me anything — or pick a question below.",
+  text: "Hey 👋 I'm the Firangi Barbeque assistant. Ask me anything — or pick a question below.",
   chips: [
    // { label: "📖 Menu & pricing", q: "menu" },
     { label: "🕒 Hours today", q: "hours" },
@@ -30,7 +30,7 @@ function reply(q: string): Msg {
     return {
       role: "bot",
       text: "Shop No. 8, Plot No. 88, Furniture Block, WHS, **Kirti Nagar**, New Delhi 110015. We're easy to find and parking is right outside.",
-      cta: [{ label: "Get directions", href: "https://www.google.com/maps/search/?api=1&query=Firangi+BBQ+2.0+Kirti+Nagar" }],
+      cta: [{ label: "Get directions", href: "https://www.google.com/maps/search/?api=1&query=Firangi+Barbeque+2.0+Kirti+Nagar" }],
     };
   if (/area|deliver|serve|nearby|locality/.test(t))
     return {
@@ -55,7 +55,7 @@ function reply(q: string): Msg {
   if (/park|valet/.test(t))
     return { role: "bot", text: "Yes — open street parking is available right outside the restaurant in the Furniture Block." };
   if (/insta|social/.test(t))
-    return { role: "bot", text: "Follow @firangibbq2.0 on Instagram for nightly specials and behind-the-scenes from the tandoor.", cta: [{ label: "Open Instagram", href: "https://www.instagram.com/firangibbq2.0/" }] };
+    return { role: "bot", text: "Follow @firangiBarbeque2.0 on Instagram for nightly specials and behind-the-scenes from the tandoor.", cta: [{ label: "Open Instagram", href: "https://www.instagram.com/firangiBarbeque2.0/" }] };
   if (/contact|phone|number|call/.test(t))
     return { role: "bot", text: "Call or WhatsApp us anytime at **+91 85880 00738** — we usually pick up between 11 AM and 2 AM." };
   if (/hi|hello|hey|good/.test(t))
@@ -170,7 +170,7 @@ export function Chatbot() {
               <div className="mb-2 flex gap-1.5 text-[10px] sm:text-xs">
                 <a href="tel:+918588000738" className="touch-target inline-flex flex-1 items-center justify-center gap-1 rounded-full border border-border py-1.5 hover:bg-secondary"><Phone className="h-3 w-3 flex-shrink-0" /> <span className="hidden sm:inline">Call</span></a>
                 <a href="#book" onClick={() => setOpen(false)} className="touch-target inline-flex flex-1 items-center justify-center gap-1 rounded-full border border-border py-1.5 hover:bg-secondary"><Calendar className="h-3 w-3 flex-shrink-0" /> <span className="hidden sm:inline">Book</span></a>
-                <a href="https://www.google.com/maps/search/?api=1&query=Firangi+BBQ+2.0+Kirti+Nagar" target="_blank" rel="noopener" className="touch-target inline-flex flex-1 items-center justify-center gap-1 rounded-full border border-border py-1.5 hover:bg-secondary"><MapPin className="h-3 w-3 flex-shrink-0" /> <span className="hidden sm:inline">Map</span></a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Firangi+Barbeque+2.0+Kirti+Nagar" target="_blank" rel="noopener" className="touch-target inline-flex flex-1 items-center justify-center gap-1 rounded-full border border-border py-1.5 hover:bg-secondary"><MapPin className="h-3 w-3 flex-shrink-0" /> <span className="hidden sm:inline">Map</span></a>
               </div>
               <form onSubmit={(e) => { e.preventDefault(); send(input); }} className="flex items-center gap-1.5 sm:gap-2">
                 <input

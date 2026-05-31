@@ -18,7 +18,7 @@ const slides = [
     tagline: "An Evening, Reimagined",
     headline_a: "Dimly Lit.",
     headline_b: "Loudly Loved.",
-    subtitle: "Velvet booths, brass lanterns, and a soundtrack that lingers. Firangi BBQ is the Friday you've been postponing.",
+    subtitle: "Velvet booths, brass lanterns, and a soundtrack that lingers. Firangi Barbeque is the Friday you've been postponing.",
   },
   {
     image: hero3,
@@ -51,7 +51,7 @@ export function HeroCarousel() {
         >
           <img
             src={slide.image}
-            alt={`${slide.headline_a} ${slide.headline_b} - Firangi BBQ 2.0 - ${slide.subtitle}`}
+            alt={`${slide.headline_a} ${slide.headline_b} - Firangi Barbeque 2.0 - ${slide.subtitle}`}
             className="h-full w-full object-cover animate-ken-burns"
             loading="eager"
           />

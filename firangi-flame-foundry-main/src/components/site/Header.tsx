@@ -9,7 +9,7 @@ const links = [
   { href: "#visit", label: "Visit" },
 ];
 
-const MAPS = "https://www.google.com/maps/search/?api=1&query=Firangi+BBQ+2.0+Kirti+Nagar";
+const MAPS = "https://www.google.com/maps/search/?api=1&query=Firangi+Barbeque+2.0+Kirti+Nagar";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,10 +24,10 @@ export function Header() {
   return (
     <header className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${scrolled ? "bg-background/80 backdrop-blur-xl border-b border-border" : "bg-transparent"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 sm:py-3 lg:px-12">
-        <a href="#" className="flex items-center gap-2 sm:gap-3" aria-label="Firangi BBQ 2.0 - Home">
-          <img src={logo} alt="Firangi BBQ 2.0 Logo - Premium Tandoor & Barbeque Restaurant" className="h-10 w-10 rounded-full object-cover ring-2 ring-accent/40 sm:h-12 sm:w-12" />
+        <a href="#" className="flex items-center gap-2 sm:gap-3" aria-label="Firangi Barbeque 2.0 - Home">
+          <img src={logo} alt="Firangi Barbeque 2.0 Logo - Premium Tandoor & Barbeque Restaurant" className="h-10 w-10 rounded-full object-cover ring-2 ring-accent/40 sm:h-12 sm:w-12" />
           <div className="leading-tight">
-            <div className="font-display text-base font-bold text-cream sm:text-lg">Firangi BBQ <span className="text-accent">2.0</span></div>
+            <div className="font-display text-base font-bold text-cream sm:text-lg">Firangi Barbeque <span className="text-accent">2.0</span></div>
             <div className="text-[8px] uppercase tracking-[0.2em] text-muted-foreground sm:text-[10px] sm:tracking-[0.25em]">Kirti Nagar · Delhi</div>
           </div>
         </a>
@@ -41,10 +41,10 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:gap-3 lg:flex">
-          <a href={MAPS} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-2 text-xs sm:px-4 sm:py-2 sm:text-sm text-cream transition hover:bg-secondary touch-target" aria-label="Get directions to Firangi BBQ 2.0 on Google Maps">
+          <a href={MAPS} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-2 text-xs sm:px-4 sm:py-2 sm:text-sm text-cream transition hover:bg-secondary touch-target" aria-label="Get directions to Firangi Barbeque 2.0 on Google Maps">
             <MapPin className="h-4 w-4" aria-hidden="true" /> Directions
           </a>
-          <a href="tel:+918588000738" className="inline-flex items-center gap-2 rounded-full gradient-ember px-4 py-2.5 text-xs sm:px-5 sm:py-2.5 sm:text-sm font-semibold text-primary-foreground shadow-ember touch-target" aria-label="Call Firangi BBQ 2.0 at +91 85880 00738">
+          <a href="tel:+918588000738" className="inline-flex items-center gap-2 rounded-full gradient-ember px-4 py-2.5 text-xs sm:px-5 sm:py-2.5 sm:text-sm font-semibold text-primary-foreground shadow-ember touch-target" aria-label="Call Firangi Barbeque 2.0 at +91 85880 00738">
             <Phone className="h-4 w-4" aria-hidden="true" /> Call
           </a>
         </div>
@@ -67,10 +67,10 @@ export function Header() {
               </a>
             ))}
             <div className="mt-8 flex flex-col gap-3">
-              <a href="tel:+918588000738" className="touch-target inline-flex items-center justify-center gap-2 rounded-full gradient-ember px-6 py-3 sm:py-4 font-semibold text-primary-foreground" aria-label="Call Firangi BBQ 2.0">
+              <a href="tel:+918588000738" className="touch-target inline-flex items-center justify-center gap-2 rounded-full gradient-ember px-6 py-3 sm:py-4 font-semibold text-primary-foreground" aria-label="Call Firangi Barbeque 2.0">
                 <Phone className="h-4 w-4" aria-hidden="true" /> Call +91 85880 00738
               </a>
-              <a href={MAPS} target="_blank" rel="noopener noreferrer" className="touch-target inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-3 sm:py-4 font-semibold text-cream" aria-label="Get directions to Firangi BBQ 2.0">
+              <a href={MAPS} target="_blank" rel="noopener noreferrer" className="touch-target inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-3 sm:py-4 font-semibold text-cream" aria-label="Get directions to Firangi Barbeque 2.0">
                 <MapPin className="h-4 w-4" aria-hidden="true" /> Get Directions
               </a>
             </div>

@@ -23,7 +23,7 @@ function NotFoundComponent() {
           to="/"
           className="mt-6 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
         >
-          Back to Firangi BBQ
+          Back to Firangi Barbeque
         </Link>
       </div>
     </div>
@@ -55,33 +55,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   meta: () => [
     { charSet: "utf-8" },
     { name: "viewport", content: "width=device-width, initial-scale=1" },
-    { title: "Firangi BBQ 2.0 — Premium Tandoor & Barbeque in Kirti Nagar, Delhi" },
-    { name: "description", content: "Smoky tandoor, signature kebabs, late-night vibes. Book your table at Firangi BBQ 2.0 — Kirti Nagar's premium barbeque destination. Open till 2:30 AM." },
-    { name: "keywords", content: "barbeque restaurant Kirti Nagar, tandoori restaurant Delhi, late night restaurant Delhi, kebabs Delhi, family restaurant Kirti Nagar, birthday party restaurant Delhi, best kebabs Delhi, BBQ restaurant New Delhi, smoky tandoor Delhi" },
-    { name: "author", content: "Firangi BBQ 2.0" },
+    { title: "Firangi Barbeque 2.0 — Premium Tandoor & Barbeque in Kirti Nagar, Delhi" },
+    { name: "description", content: "Smoky tandoor, signature kebabs, late-night vibes. Book your table at Firangi Barbeque 2.0 — Kirti Nagar's premium barbeque destination. Open till 2:30 AM." },
+    { name: "keywords", content: "barbeque restaurant Kirti Nagar, tandoori restaurant Delhi, late night restaurant Delhi, kebabs Delhi, family restaurant Kirti Nagar, birthday party restaurant Delhi, best kebabs Delhi, Barbeque restaurant New Delhi, smoky tandoor Delhi" },
+    { name: "author", content: "Firangi Barbeque 2.0" },
     { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
     { httpEquiv: "x-ua-compatible", content: "IE=edge" },
     { name: "theme-color", content: "#ad5f37" },
     
     // Open Graph / Social Tags (Formatted with clear attribute mapping)
-    { property: "og:title", content: "Firangi BBQ 2.0 — Where Smoke Meets Soul" },
+    { property: "og:title", content: "Firangi Barbeque 2.0 — Where Smoke Meets Soul" },
     { property: "og:description", content: "Delhi's premium late-night smokehouse. Live tandoor, signature kebabs, and slow-cooked curries. Open till 2:30 AM in Kirti Nagar." },
     { property: "og:type", content: "business.business" },
-    { property: "og:url", content: "https://firangibbq.com/" },
-    { property: "og:image", content: "https://firangibbq.com/og-image.jpg" },
+    { property: "og:url", content: "https://firangiBarbeque.com/" },
+    { property: "og:image", content: "https://firangiBarbeque.com/og-image.jpg" },
     { property: "og:image:width", content: "1200" },
     { property: "og:image:height", content: "630" },
     { property: "og:locale", content: "en_IN" },
     
     // Twitter Card Tags
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "Firangi BBQ 2.0 — Premium Tandoor & Barbeque" },
+    { name: "twitter:title", content: "Firangi Barbeque 2.0 — Premium Tandoor & Barbeque" },
     { name: "twitter:description", content: "Delhi's late-night smokehouse. Signature kebabs & live tandoor. Kirti Nagar, open till 2:30 AM." },
-    { name: "twitter:image", content: "https://firangibbq.com/og-image.jpg" },
+    { name: "twitter:image", content: "https://firangiBarbeque.com/og-image.jpg" },
   ],
   links: () => [
     { rel: "stylesheet", href: appCss },
-    { rel: "canonical", href: "https://firangibbq.com/" },
+    { rel: "canonical", href: "https://firangiBarbeque.com/" },
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" },
@@ -105,12 +105,12 @@ function RootComponent() {
       schemaScript.innerHTML = JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Restaurant",
-        "name": "Firangi BBQ 2.0",
+        "name": "Firangi Barbeque 2.0",
         "description": "Premium tandoor & barbeque restaurant with live coal-fired ovens, signature kebabs, and late-night dining till 2:30 AM",
-        "url": "https://firangibbq.com/",
+        "url": "https://firangiBarbeque.com/",
         "image": {
           "@type": "ImageObject",
-          "url": "https://firangibbq.com/logo.webp",
+          "url": "https://firangiBarbeque.com/logo.webp",
           "width": 1200,
           "height": 630
         },
@@ -168,8 +168,8 @@ function RootComponent() {
           }
         ],
         "sameAs": [
-          "https://www.instagram.com/firangibbq2.0/",
-          "https://www.google.com/maps/search/?api=1&query=Firangi+BBQ+2.0+Kirti+Nagar"
+          "https://www.instagram.com/firangiBarbeque2.0/",
+          "https://www.google.com/maps/search/?api=1&query=Firangi+Barbeque+2.0+Kirti+Nagar"
         ],
         "menu": {
           "@type": "Menu",

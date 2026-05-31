@@ -16,7 +16,7 @@ export function WhyUs() {
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="mx-auto max-w-2xl text-center"
         >
-          <span className="text-xs uppercase tracking-[0.3em] text-accent">Why Firangi BBQ 2.0</span>
+          <span className="text-xs uppercase tracking-[0.3em] text-accent">Why Firangi Barbeque 2.0</span>
           <h2 className="mt-3 sm:mt-4 heading-section">
             Built by hosts. <span className="italic text-accent">Loved</span> by Delhi.
           </h2>

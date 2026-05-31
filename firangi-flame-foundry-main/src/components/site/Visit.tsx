@@ -12,7 +12,7 @@ const schedule = [
   { day: "Sunday", hours: "6:00 PM – 2:30 AM" },
 ];
 
-const MAPS = "https://www.google.com/maps/search/?api=1&query=Firangi+BBQ+2.0+Kirti+Nagar";
+const MAPS = "https://www.google.com/maps/search/?api=1&query=Firangi+Barbeque+2.0+Kirti+Nagar";
 
 export function Visit() {
   const todayIdx = (new Date().getDay() + 6) % 7; // Mon=0
@@ -30,26 +30,26 @@ export function Visit() {
             <div className="flex items-start gap-3 sm:gap-4">
               <div className="rounded-2xl gradient-ember p-2.5 sm:p-3 text-primary-foreground flex-shrink-0" aria-hidden="true"><MapPin className="h-4 w-4 sm:h-5 sm:w-5" /></div>
               <div>
-                <div className="font-display text-base sm:text-lg">Firangi BBQ 2.0</div>
+                <div className="font-display text-base sm:text-lg">Firangi Barbeque 2.0</div>
                 <p className="mt-1 text-xs sm:text-sm text-muted-foreground">
                   Shop No. 8, Plot No. 88, Furniture Block, WHS, Kirti Nagar, New Delhi, Delhi 110015
                 </p>
               </div>
             </div>
             <div className="mt-5 sm:mt-6 grid grid-cols-2 gap-2.5 sm:gap-3">
-              <a href="tel:+918588000738" className="touch-target inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full gradient-ember px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-primary-foreground shadow-ember" aria-label="Call Firangi BBQ 2.0 at +91 85880 00738">
+              <a href="tel:+918588000738" className="touch-target inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full gradient-ember px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-primary-foreground shadow-ember" aria-label="Call Firangi Barbeque 2.0 at +91 85880 00738">
                 <Phone className="h-4 w-4" aria-hidden="true" /> <span className="hidden sm:inline">Call</span>
               </a>
-              <a href={MAPS} target="_blank" rel="noopener noreferrer" className="touch-target inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full border border-border px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold" aria-label="Get directions to Firangi BBQ 2.0 on Google Maps">
+              <a href={MAPS} target="_blank" rel="noopener noreferrer" className="touch-target inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full border border-border px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold" aria-label="Get directions to Firangi Barbeque 2.0 on Google Maps">
                 <Navigation className="h-4 w-4" aria-hidden="true" /> <span className="hidden sm:inline">Directions</span>
               </a>
             </div>
             <a
-              href="https://www.instagram.com/firangibbq2.0/"
+              href="https://www.instagram.com/firangiBarbeque2.0/"
               target="_blank" rel="noopener noreferrer"
-              className="touch-target mt-2.5 sm:mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full border border-border px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold" aria-label="Follow Firangi BBQ 2.0 on Instagram"
+              className="touch-target mt-2.5 sm:mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full border border-border px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold" aria-label="Follow Firangi Barbeque 2.0 on Instagram"
             >
-              <Instagram className="h-4 w-4" aria-hidden="true" /> @firangibbq2.0
+              <Instagram className="h-4 w-4" aria-hidden="true" /> @firangiBarbeque2.0
             </a>
           </div>
         </div>

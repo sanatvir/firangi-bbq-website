@@ -7,7 +7,7 @@ export function CTAForm() {
   };
 
   const handleDirectionsClick = () => {
-    window.open("https://www.google.com/maps/search/?api=1&query=Firangi+BBQ+2.0+Kirti+Nagar", "_blank");
+    window.open("https://www.google.com/maps/search/?api=1&query=Firangi+Barbeque+2.0+Kirti+Nagar", "_blank");
   };
 
   return (

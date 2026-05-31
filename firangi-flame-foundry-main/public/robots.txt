@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps path declaration
-Sitemap: https://firangi-bbq-website.vercel.app/sitemap.xml
+Sitemap: https://firangi-Barbeque-website.vercel.app/sitemap.xml

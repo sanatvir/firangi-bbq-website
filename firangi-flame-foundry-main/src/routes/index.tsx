@@ -19,19 +19,19 @@ export const Route = createFileRoute("/")({
 function Index() {
   // Dynamically set SEO metadata for the SPA client-side execution
   useEffect(() => {
-    document.title = "Firangi BBQ 2.0 — Premium Tandoor & Barbeque Restaurant in Kirti Nagar, Delhi";
+    document.title = "Firangi Barbeque 2.0 — Premium Tandoor & Barbeque Restaurant in Kirti Nagar, Delhi";
     
     const metaTags = [
       { name: "description", content: "Live tandoor, signature kebabs, slow-cooked curries — open till 2:30 AM in Kirti Nagar. Reserve your table at Delhi's premium barbeque restaurant. Authentic tandoori specialties, family-friendly environment, birthday party bookings." },
-      { name: "keywords", content: "barbeque restaurant Kirti Nagar, tandoori restaurant Delhi, late night restaurant Delhi, kebabs in Delhi, BBQ restaurant New Delhi, tandoor restaurant, best kebabs Delhi, family restaurant, birthday party venue Delhi" },
-      { property: "og:title", content: "Firangi BBQ 2.0 — Where Smoke Meets Soul" },
+      { name: "keywords", content: "barbeque restaurant Kirti Nagar, tandoori restaurant Delhi, late night restaurant Delhi, kebabs in Delhi, Barbeque restaurant New Delhi, tandoor restaurant, best kebabs Delhi, family restaurant, birthday party venue Delhi" },
+      { property: "og:title", content: "Firangi Barbeque 2.0 — Where Smoke Meets Soul" },
       { property: "og:description", content: "Delhi's premium late-night smokehouse. Live tandoor, signature kebabs, and slow-cooked curries. Open till 2:30 AM in Kirti Nagar. Book now!" },
-      { property: "og:url", content: "https://firangibbq.com/" },
-      { property: "og:image", content: "https://firangibbq.com/og-image.jpg" },
+      { property: "og:url", content: "https://firangiBarbeque.com/" },
+      { property: "og:image", content: "https://firangiBarbeque.com/og-image.jpg" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Firangi BBQ 2.0 — Premium Tandoor & Barbeque" },
-      { name: "twitter:description", content: "Delhi's best BBQ restaurant. Live tandoor & signature kebabs. Kirti Nagar, open till 2:30 AM." }
+      { name: "twitter:title", content: "Firangi Barbeque 2.0 — Premium Tandoor & Barbeque" },
+      { name: "twitter:description", content: "Delhi's best Barbeque restaurant. Live tandoor & signature kebabs. Kirti Nagar, open till 2:30 AM." }
     ];
 
     metaTags.forEach(({ name, property, content }) => {
@@ -54,7 +54,7 @@ function Index() {
       canonical.setAttribute("rel", "canonical");
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute("href", "https://firangibbq.com/");
+    canonical.setAttribute("href", "https://firangiBarbeque.com/");
   }, []);
 
   return (
