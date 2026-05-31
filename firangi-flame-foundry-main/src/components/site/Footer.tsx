@@ -23,7 +23,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2 sm:space-y-3 text-xs sm:text-sm text-muted-foreground">
             <li className="flex items-start gap-2 sm:gap-3"><MapPin className="mt-0.5 h-3 w-3 sm:h-4 sm:w-4 text-accent flex-shrink-0" aria-hidden="true" /> <span>Shop 8, Plot 88, Furniture Block, WHS, Kirti Nagar, New Delhi 110015</span></li>
             <li><a href="tel:+918588000738" className="flex items-center gap-2 sm:gap-3 hover:text-cream" aria-label="Call Firangi Barbeque 2.0"><Phone className="h-3 w-3 sm:h-4 sm:w-4 text-accent flex-shrink-0" aria-hidden="true" /> +91 85880 00738</a></li>
-            <li><a href="https://www.instagram.com/firangiBarbeque2.0/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 sm:gap-3 hover:text-cream" aria-label="Visit Firangi Barbeque 2.0 on Instagram"><Instagram className="h-3 w-3 sm:h-4 sm:w-4 text-accent flex-shrink-0" aria-hidden="true" /> @firangiBarbeque2.0</a></li>
+            <li><a href="https://www.instagram.com/firangibbq2.0/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 sm:gap-3 hover:text-cream" aria-label="Visit Firangi Barbeque 2.0 on Instagram"><Instagram className="h-3 w-3 sm:h-4 sm:w-4 text-accent flex-shrink-0" aria-hidden="true" /> @firangiBarbeque2.0</a></li>
             <li className="flex items-center gap-2 sm:gap-3"><Clock className="h-3 w-3 sm:h-4 sm:w-4 text-accent flex-shrink-0" aria-hidden="true" /> <span>Open 6 PM – 2:30 AM (Closed Tuesdays)</span></li>
           </ul>
         </div>

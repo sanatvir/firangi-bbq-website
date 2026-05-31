@@ -55,7 +55,7 @@ function reply(q: string): Msg {
   if (/park|valet/.test(t))
     return { role: "bot", text: "Yes — open street parking is available right outside the restaurant in the Furniture Block." };
   if (/insta|social/.test(t))
-    return { role: "bot", text: "Follow @firangiBarbeque2.0 on Instagram for nightly specials and behind-the-scenes from the tandoor.", cta: [{ label: "Open Instagram", href: "https://www.instagram.com/firangiBarbeque2.0/" }] };
+    return { role: "bot", text: "Follow @firangiBarbeque2.0 on Instagram for nightly specials and behind-the-scenes from the tandoor.", cta: [{ label: "Open Instagram", href: "https://www.instagram.com/firangibbq2.0/" }] };
   if (/contact|phone|number|call/.test(t))
     return { role: "bot", text: "Call or WhatsApp us anytime at **+91 85880 00738** — we usually pick up between 11 AM and 2 AM." };
   if (/hi|hello|hey|good/.test(t))

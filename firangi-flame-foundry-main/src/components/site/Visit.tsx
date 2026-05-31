@@ -45,7 +45,7 @@ export function Visit() {
               </a>
             </div>
             <a
-              href="https://www.instagram.com/firangiBarbeque2.0/"
+              href="https://www.instagram.com/firangibbq2.0/"
               target="_blank" rel="noopener noreferrer"
               className="touch-target mt-2.5 sm:mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full border border-border px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold" aria-label="Follow Firangi Barbeque 2.0 on Instagram"
             >

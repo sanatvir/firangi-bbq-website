@@ -168,7 +168,7 @@ function RootComponent() {
           }
         ],
         "sameAs": [
-          "https://www.instagram.com/firangiBarbeque2.0/",
+          "https://www.instagram.com/firangibbq2.0/",
           "https://www.google.com/maps/search/?api=1&query=Firangi+Barbeque+2.0+Kirti+Nagar"
         ],
         "menu": {
