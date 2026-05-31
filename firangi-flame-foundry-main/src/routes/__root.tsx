@@ -63,7 +63,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     { httpEquiv: "x-ua-compatible", content: "IE=edge" },
     { name: "theme-color", content: "#ad5f37" },
     
-    // Open Graph / Social
+    // Open Graph / Social Tags (Formatted with clear attribute mapping)
     { property: "og:title", content: "Firangi BBQ 2.0 — Where Smoke Meets Soul" },
     { property: "og:description", content: "Delhi's premium late-night smokehouse. Live tandoor, signature kebabs, and slow-cooked curries. Open till 2:30 AM in Kirti Nagar." },
     { property: "og:type", content: "business.business" },
@@ -73,37 +73,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     { property: "og:image:height", content: "630" },
     { property: "og:locale", content: "en_IN" },
     
-    // Twitter Card
+    // Twitter Card Tags
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: "Firangi BBQ 2.0 — Premium Tandoor & Barbeque" },
     { name: "twitter:description", content: "Delhi's late-night smokehouse. Signature kebabs & live tandoor. Kirti Nagar, open till 2:30 AM." },
     { name: "twitter:image", content: "https://firangibbq.com/og-image.jpg" },
-    
-    // Local Business / Schema
-    { name: "business:contact_data:street_address", content: "Shop 8, Plot 88, Furniture Block, WHS" },
-    { name: "business:contact_data:locality", content: "Kirti Nagar" },
-    { name: "business:contact_data:region", content: "Delhi" },
-    { name: "business:contact_data:postal_code", content: "110015" },
-    { name: "business:contact_data:country_name", content: "India" },
-    { name: "business:contact_data:phone_number", content: "+91 85880 00738" },
-    
-    // Additional SEO
-    { name: "language", content: "English" },
-    { name: "revisit-after", content: "7 days" },
   ],
   links: () => [
     { rel: "stylesheet", href: appCss },
     { rel: "canonical", href: "https://firangibbq.com/" },
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" },
+    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" },
     { rel: "icon", href: "/favicon.ico" },
     { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
   ],
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
-});
+})
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
