@@ -3,9 +3,7 @@ import {
   Outlet,
   Link,
   createRootRouteWithContext,
-  useRouter,                  
-  HeadContent,
-  Scripts,
+  useRouter,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -54,189 +52,183 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Firangi BBQ 2.0 — Premium Tandoor & Barbeque in Kirti Nagar, Delhi" },
-      { name: "description", content: "Smoky tandoor, signature kebabs, late-night vibes. Book your table at Firangi BBQ 2.0 — Kirti Nagar's premium barbeque destination. Open till 2:30 AM." },
-      { name: "keywords", content: "barbeque restaurant Kirti Nagar, tandoori restaurant Delhi, late night restaurant Delhi, kebabs Delhi, family restaurant Kirti Nagar, birthday party restaurant Delhi, best kebabs Delhi, BBQ restaurant New Delhi, smoky tandoor Delhi" },
-      { name: "author", content: "Firangi BBQ 2.0" },
-      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
-      { httpEquiv: "x-ua-compatible", content: "IE=edge" },
-      { name: "theme-color", content: "#ad5f37" },
-      
-      // Open Graph / Social
-      { property: "og:title", content: "Firangi BBQ 2.0 — Where Smoke Meets Soul" },
-      { property: "og:description", content: "Delhi's premium late-night smokehouse. Live tandoor, signature kebabs, and slow-cooked curries. Open till 2:30 AM in Kirti Nagar." },
-      { property: "og:type", content: "business.business" },
-      { property: "og:url", content: "https://firangibbq.com/" },
-      { property: "og:image", content: "https://firangibbq.com/og-image.jpg" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:locale", content: "en_IN" },
-      
-      // Twitter Card
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Firangi BBQ 2.0 — Premium Tandoor & Barbeque" },
-      { name: "twitter:description", content: "Delhi's late-night smokehouse. Signature kebabs & live tandoor. Kirti Nagar, open till 2:30 AM." },
-      { name: "twitter:image", content: "https://firangibbq.com/og-image.jpg" },
-      
-      // Local Business / Schema
-      { name: "business:contact_data:street_address", content: "Shop 8, Plot 88, Furniture Block, WHS" },
-      { name: "business:contact_data:locality", content: "Kirti Nagar" },
-      { name: "business:contact_data:region", content: "Delhi" },
-      { name: "business:contact_data:postal_code", content: "110015" },
-      { name: "business:contact_data:country_name", content: "India" },
-      { name: "business:contact_data:phone_number", content: "+91 85880 00738" },
-      
-      // Additional SEO
-      { name: "language", content: "English" },
-      { name: "revisit-after", content: "7 days" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "canonical", href: "https://firangibbq.com/" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" },
-      { rel: "icon", href: "/favicon.ico" },
-      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Restaurant",
-          "name": "Firangi BBQ 2.0",
-          "description": "Premium tandoor & barbeque restaurant with live coal-fired ovens, signature kebabs, and late-night dining till 2:30 AM",
-          "url": "https://firangibbq.com/",
-          "image": {
-            "@type": "ImageObject",
-            "url": "https://firangibbq.com/logo.webp",
-            "width": 1200,
-            "height": 630
-          },
-          "telephone": "+91 85880 00738",
-          "priceRange": "₹₹₹",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Shop 8, Plot 88, Furniture Block, WHS",
-            "addressLocality": "Kirti Nagar",
-            "addressRegion": "Delhi",
-            "postalCode": "110015",
-            "addressCountry": "IN"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "28.6531",
-            "longitude": "77.0502"
-          },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Monday",
-              "opens": "18:00",
-              "closes": "02:30"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Wednesday",
-              "opens": "18:00",
-              "closes": "02:30"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Thursday",
-              "opens": "18:00",
-              "closes": "02:30"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Friday",
-              "opens": "18:00",
-              "closes": "02:30"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Saturday",
-              "opens": "18:00",
-              "closes": "02:30"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Sunday",
-              "opens": "18:00",
-              "closes": "02:30"
-            }
-          ],
-          "sameAs": [
-            "https://www.instagram.com/firangibbq2.0/",
-            "https://www.google.com/maps/search/?api=1&query=Firangi+BBQ+2.0+Kirti+Nagar"
-          ],
-          "menu": {
-            "@type": "Menu",
-            "hasMenuSection": [
-              {
-                "@type": "MenuSection",
-                "name": "Live Tandoor",
-                "description": "Coal-fired clay ovens with signature kebabs and tandoori specialties"
-              },
-              {
-                "@type": "MenuSection",
-                "name": "Signature Kebabs",
-                "description": "Seekh, Malai Tikka, Tandoori Prawns, and Firangi Sharing Platter"
-              },
-              {
-                "@type": "MenuSection",
-                "name": "Slow-Cooked Curries",
-                "description": "Butter Chicken, Dal Firangi, Laal Maas finished over the grill"
-              }
-            ]
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.6",
-            "ratingCount": "600",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "author": {
-                "@type": "Person",
-                "name": "Regular Guest"
-              },
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5"
-              },
-              "reviewBody": "Food is very delicious. Staff service is quick and polite. All-time favourite!"
-            }
-          ]
-        }),
-      },
-    ],
-  }),
-  shellComponent: RootShell,
+  meta: () => [
+    { charSet: "utf-8" },
+    { name: "viewport", content: "width=device-width, initial-scale=1" },
+    { title: "Firangi BBQ 2.0 — Premium Tandoor & Barbeque in Kirti Nagar, Delhi" },
+    { name: "description", content: "Smoky tandoor, signature kebabs, late-night vibes. Book your table at Firangi BBQ 2.0 — Kirti Nagar's premium barbeque destination. Open till 2:30 AM." },
+    { name: "keywords", content: "barbeque restaurant Kirti Nagar, tandoori restaurant Delhi, late night restaurant Delhi, kebabs Delhi, family restaurant Kirti Nagar, birthday party restaurant Delhi, best kebabs Delhi, BBQ restaurant New Delhi, smoky tandoor Delhi" },
+    { name: "author", content: "Firangi BBQ 2.0" },
+    { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
+    { httpEquiv: "x-ua-compatible", content: "IE=edge" },
+    { name: "theme-color", content: "#ad5f37" },
+    
+    // Open Graph / Social
+    { property: "og:title", content: "Firangi BBQ 2.0 — Where Smoke Meets Soul" },
+    { property: "og:description", content: "Delhi's premium late-night smokehouse. Live tandoor, signature kebabs, and slow-cooked curries. Open till 2:30 AM in Kirti Nagar." },
+    { property: "og:type", content: "business.business" },
+    { property: "og:url", content: "https://firangibbq.com/" },
+    { property: "og:image", content: "https://firangibbq.com/og-image.jpg" },
+    { property: "og:image:width", content: "1200" },
+    { property: "og:image:height", content: "630" },
+    { property: "og:locale", content: "en_IN" },
+    
+    // Twitter Card
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Firangi BBQ 2.0 — Premium Tandoor & Barbeque" },
+    { name: "twitter:description", content: "Delhi's late-night smokehouse. Signature kebabs & live tandoor. Kirti Nagar, open till 2:30 AM." },
+    { name: "twitter:image", content: "https://firangibbq.com/og-image.jpg" },
+    
+    // Local Business / Schema
+    { name: "business:contact_data:street_address", content: "Shop 8, Plot 88, Furniture Block, WHS" },
+    { name: "business:contact_data:locality", content: "Kirti Nagar" },
+    { name: "business:contact_data:region", content: "Delhi" },
+    { name: "business:contact_data:postal_code", content: "110015" },
+    { name: "business:contact_data:country_name", content: "India" },
+    { name: "business:contact_data:phone_number", content: "+91 85880 00738" },
+    
+    // Additional SEO
+    { name: "language", content: "English" },
+    { name: "revisit-after", content: "7 days" },
+  ],
+  links: () => [
+    { rel: "stylesheet", href: appCss },
+    { rel: "canonical", href: "https://firangibbq.com/" },
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" },
+    { rel: "icon", href: "/favicon.ico" },
+    { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+  ],
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
 
-function RootShell({ children }: { children: ReactNode }) {
-  return (
-    <html lang="en">
-      <head><HeadContent /></head>
-      <body>{children}<Scripts /></body>
-    </html>
-  );
-}
-
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    let schemaScript = document.getElementById("jsonld-restaurant-schema");
+    if (!schemaScript) {
+      schemaScript = document.createElement("script");
+      schemaScript.id = "jsonld-restaurant-schema";
+      schemaScript.setAttribute("type", "application/ld+json");
+      schemaScript.innerHTML = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Firangi BBQ 2.0",
+        "description": "Premium tandoor & barbeque restaurant with live coal-fired ovens, signature kebabs, and late-night dining till 2:30 AM",
+        "url": "https://firangibbq.com/",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://firangibbq.com/logo.webp",
+          "width": 1200,
+          "height": 630
+        },
+        "telephone": "+91 85880 00738",
+        "priceRange": "₹₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Shop 8, Plot 88, Furniture Block, WHS",
+          "addressLocality": "Kirti Nagar",
+          "addressRegion": "Delhi",
+          "postalCode": "110015",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "28.6531",
+          "longitude": "77.0502"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Monday",
+            "opens": "18:00",
+            "closes": "02:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Wednesday",
+            "opens": "18:00",
+            "closes": "02:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Thursday",
+            "opens": "18:00",
+            "closes": "02:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Friday",
+            "opens": "18:00",
+            "closes": "02:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "18:00",
+            "closes": "02:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "18:00",
+            "closes": "02:30"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/firangibbq2.0/",
+          "https://www.google.com/maps/search/?api=1&query=Firangi+BBQ+2.0+Kirti+Nagar"
+        ],
+        "menu": {
+          "@type": "Menu",
+          "hasMenuSection": [
+            {
+              "@type": "MenuSection",
+              "name": "Live Tandoor",
+              "description": "Coal-fired clay ovens with signature kebabs and tandoori specialties"
+            },
+            {
+              "@type": "MenuSection",
+              "name": "Signature Kebabs",
+              "description": "Seekh, Malai Tikka, Tandoori Prawns, and Firangi Sharing Platter"
+            },
+            {
+              "@type": "MenuSection",
+              "name": "Slow-Cooked Curries",
+              "description": "Butter Chicken, Dal Firangi, Laal Maas finished over the grill"
+            }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.6",
+          "ratingCount": "600",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Regular Guest"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5"
+            },
+            "reviewBody": "Food is very delicious. Staff service is quick and polite. All-time favourite!"
+          }
+        ]
+      });
+      document.head.appendChild(schemaScript);
+    }
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <Outlet />
