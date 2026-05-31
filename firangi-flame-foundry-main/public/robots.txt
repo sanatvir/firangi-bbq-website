@@ -1,25 +1,5 @@
-# Robots.txt for Firangi BBQ 2.0
-# Allow all bots to crawl and index the site
-
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /api/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /?*utm_*
 
-# Specific rules for search engines
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-# Sitemap location
-Sitemap: https://firangibbq.com/sitemap.xml
-
-# Cache time in seconds
-Cache-Control: public, max-age=604800
+# Sitemaps path declaration
+Sitemap: https://firangi-bbq-website.vercel.app/sitemap.xml
