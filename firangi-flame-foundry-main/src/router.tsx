@@ -1,11 +1,12 @@
 import { QueryClient } from "@tanstack/react-query";
-import { createRouter } from "@tanstack/react-router";
+import { createRouter as createSharedRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 
-export const getRouter = () => {
+// 1. Create a function named exactly 'createRouter'
+export function createRouter() {
   const queryClient = new QueryClient();
 
-  const router = createRouter({
+  const router = createSharedRouter({
     routeTree,
     context: { queryClient },
     scrollRestoration: true,
@@ -13,4 +14,11 @@ export const getRouter = () => {
   });
 
   return router;
-};
+}
+
+// 2. Register the router types for type safety
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: ReturnType<typeof createRouter>;
+  }
+}
